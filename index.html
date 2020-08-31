@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand " href="#">MY WEATHER</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Today </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index2.html">5-day forecast</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input id="search-input">
+            <button id="btnSearch">Search</button>
+        </form>
+    </div>
+</nav>
+<div class="container ">
+    <div class="row justify-content-between">
+        <div class="col-sm-3 ">
+            <h4 class="info-title">Current Weather</h4>
+        </div>
+        <div class="col-sm-3 ">
+            <h4 id="date" class="info-title"></h4>
+        </div>
+    </div>
+    <div class="row justify-content-between">
+        <div class="col-sm-4">
+            <img id="current-weather-icon" />
+            <p id="current-weather-description" class="description"></p>
+        </div>
+        <div class="col-sm-4">
+            <label id="current-temperature" class="temperature"></label>
+            <label class="temperature"> °C </label>
+            <div>
+                <label class="description">feels like</label>
+                <label id="feels-like" class="description"></label>
+                <label class="description"> °C </label>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="start">
+                <div>
+                    <label class="description"> Sunrise: </label>
+                    <label class="description" id="today-sunrise"></label>
+                </div>
+                <div>
+                    <label class="description"> Sunset: </label>
+                    <label class="description" id="today-sunset"></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="jumbotron jumbotron-fluid">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Today</th>
+                <th id="hour-1" scope="col">First</th>
+                <th id="hour-2" scope="col">Last</th>
+                <th id="hour-3" scope="col">Handle</th>
+                <th id="hour-4" scope="col">Handle</th>
+                <th id="hour-5" scope="col">Handle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Image</th>
+                <td><img id="hours-weather-icon-1"></td>
+                <td><img id="hours-weather-icon-2"></td>
+                <td><img id="hours-weather-icon-3"></td>
+                <td><img id="hours-weather-icon-4"></td>
+                <td><img id="hours-weather-icon-5"></td>
+            </tr>
+            <tr>
+                <th scope="row">Forecast</th>
+                <td id="hours-weather-description-1"></td>
+                <td id="hours-weather-description-2"></td>
+                <td id="hours-weather-description-3"></td>
+                <td id="hours-weather-description-4"></td>
+                <td id="hours-weather-description-5"></td>
+            </tr>
+            <tr>
+                <th scope="row">Temp(°C)</th>
+                <td id="hours-temperature-1"></td>
+                <td id="hours-temperature-2"></td>
+                <td id="hours-temperature-3"></td>
+                <td id="hours-temperature-4"></td>
+                <td id="hours-temperature-5"></td>
+            </tr>
+            <tr>
+                <th scope="row">Real feel(°C)</th>
+                <td id="feels-like-1"></td>
+                <td id="feels-like-2"></td>
+                <td id="feels-like-3"></td>
+                <td id="feels-like-4"></td>
+                <td id="feels-like-5"></td>
+            </tr>
+            <tr>
+                <th scope="row">Wind(km/h)</th>
+                <td id="wind-1"></td>
+                <td id="wind-2"></td>
+                <td id="wind-3"></td>
+                <td id="wind-4"></td>
+                <td id="wind-5"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
